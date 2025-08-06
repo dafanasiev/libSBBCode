@@ -1,0 +1,6 @@
+bin/
+obj/
+*.g.cs
+.idea/
+paket-files/
+*.DotSettings.user

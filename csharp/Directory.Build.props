@@ -1,0 +1,7 @@
+<Project>
+    <Import Project="$(MSBuildThisFileDirectory)AppVersion.props"/>
+    <PropertyGroup>
+        <Authors>Dmitry Afanasiev &lt;afanasiev.dmitry@gmail.com&gt;</Authors>
+        <Description>SBBCode parser</Description>
+    </PropertyGroup>
+</Project>

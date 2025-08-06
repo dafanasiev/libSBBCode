@@ -1,0 +1,8 @@
+<Project>
+    <PropertyGroup>
+        <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+        <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+        <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+        <IsTransformWebConfigDisabled>true</IsTransformWebConfigDisabled>
+    </PropertyGroup>
+</Project>

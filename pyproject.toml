@@ -1,0 +1,14 @@
+[project]
+name = "sbbcode"
+version = "0.1.0"
+description = "SBBCode parser"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
+
+[dependency-groups]
+dev = [
+    "antlr4-tools>=0.2.2",
+    "watchdog>=6.0.0",
+]

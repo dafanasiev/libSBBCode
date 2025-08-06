@@ -1,0 +1,11 @@
+source https://api.nuget.org/v3/index.json
+source https://nuget-pkg.effectivetrade.ru/dev/index.json
+
+storage: none
+
+nuget Antlr4.Runtime.Standard 4.13.1
+
+nuget coverlet.collector
+nuget Microsoft.NET.Test.Sdk
+nuget xunit
+nuget xunit.runner.visualstudio
