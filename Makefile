@@ -39,3 +39,10 @@ csharp: csharp-gen
 	dotnet paket restore --silent --fail-on-checks && \
 	dotnet pack libSBBCode.csproj --nologo --output=../../dist/csharp --configuration Release -p:Version=${VERSION} -p:SourceRevisionId=${SRC_REVISION} -p:PaketDisableGlobalRestore=true
 	
+.PHONY: typescript-gen
+typescript-gen: antlr4.jar
+	rm -rf /tmp/libSBBCode-typescript
+	mkdir -p ./typescript/internal
+	rm -f ./typescript/internal/*.g.cs
+
+	java -jar antlr4.jar -Dlanguage=TypeScript -no-listener *.g4 -o ./typescript/internal
