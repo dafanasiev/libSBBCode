@@ -41,10 +41,10 @@ csharp: csharp-gen
 	
 .PHONY: typescript-gen
 typescript-gen: antlr4.jar
-	mkdir -p ./typescript/internal
-	rm -f ./typescript/internal/*.ts
+	mkdir -p ./typescript/src/internal
+	rm -f ./typescript/src/internal/*.ts
 
-	java -jar antlr4.jar -Dlanguage=TypeScript -no-listener *.g4 -o ./typescript/internal
+	java -jar antlr4.jar -Dlanguage=TypeScript -no-listener *.g4 -o ./typescript/src/internal
 
 .PHONY: typescript
 typescript: typescript-gen
