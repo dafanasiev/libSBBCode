@@ -1,5 +1,5 @@
 import { CharStreams, CommonTokenStream, ParserRuleContext } from "antlr4";
-import SBBCodeParser, {
+import InternalSBBCodeParser, {
   ElementContext,
   ParseContext,
 } from "./internal/SBBCodeParser";
@@ -45,13 +45,13 @@ export class SBBContent implements ISBBElement {
   }
 }
 
-export class SBBParser {
-  public parse(text: string) {
+export class SBBCodeParser {
+  public parse(text: string): Array<ISBBElement> {
     const stream = CharStreams.fromString(text);
     const lexer = new SBBCodeLexer(stream);
 
     const tokenStream = new CommonTokenStream(lexer);
-    const parser = new SBBCodeParser(tokenStream);
+    const parser = new InternalSBBCodeParser(tokenStream);
 
     const tree = parser.parse();
     if (parser.syntaxErrorsCount != 0) {
