@@ -3,7 +3,7 @@ import path from "path";
 export default {
   // Sets the mode to 'development' or 'production'
   // 'production' enables built-in optimizations like minification
-  mode: "development",
+  mode: "production",
 
   // The entry point(s) of your application
   entry: "./lib/index.js",

@@ -45,7 +45,7 @@ export class SBBContent implements ISBBElement {
   }
 }
 
-export class SBBCodeParser {
+export default class SBBCodeParser {
   public parse(text: string): Array<ISBBElement> {
     const stream = CharStreams.fromString(text);
     const lexer = new SBBCodeLexer(stream);

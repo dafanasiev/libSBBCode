@@ -2,10 +2,10 @@
   "name": "libsbbcode",
   "version": "0.0.1-dev",
   "description": "",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "type": "commonjs",
   "scripts": {
-    "build": "rm -rf lib && tsc --build && webpack-cli",
+    "build": "rm -rf lib && tsc --build",
     "pack": "npm run build && npm pack",
     "debug": "tsx index.ts",
     "test": "node --import tsx --test 'tests/**/*.test.ts'"
