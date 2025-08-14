@@ -2,7 +2,7 @@
   "name": "libsbbcode",
   "version": "0.0.1-dev",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "rm -rf lib && tsc --build",
     "pack": "npm run build && npm pack",
