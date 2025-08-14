@@ -3,6 +3,7 @@
   "version": "0.0.1-dev",
   "description": "",
   "main": "lib/index.js",
+  "type": "commonjs",
   "scripts": {
     "build": "rm -rf lib && tsc --build",
     "pack": "npm run build && npm pack",
@@ -12,7 +13,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "dependencies": {
     "antlr4": "^4.13.2"
   },
