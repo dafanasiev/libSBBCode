@@ -49,10 +49,10 @@ typescript-gen: antlr4.jar
 .PHONY: typescript
 typescript: typescript-gen
 	rm -rf dist/typescript
-	mkdir dist/typescript
+	mkdir -p dist/typescript
 
 	cd typescript && \
-	npm version $(VERSION) && \
+	npm version --allow-same-version $(VERSION) && \
 	npm run pack && \
-	git restore typescript/package.json && \
+	git restore package.json package-lock.json && \
 	mv libsbbcode-*.tgz ../dist/typescript/
