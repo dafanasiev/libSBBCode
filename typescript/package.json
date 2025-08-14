@@ -1,10 +1,11 @@
 {
-  "name": "typescript",
-  "version": "1.0.0",
+  "name": "libsbbcode",
+  "version": "0.0.1-dev",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc --build",
+    "build": "rm -rf lib && tsc --build",
+    "pack": "npm run build && npm pack",
     "debug": "tsx index.ts",
     "test": "node --import tsx --test 'tests/**/*.test.ts'"
   },

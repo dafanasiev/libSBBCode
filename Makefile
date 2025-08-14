@@ -41,8 +41,18 @@ csharp: csharp-gen
 	
 .PHONY: typescript-gen
 typescript-gen: antlr4.jar
-	rm -rf /tmp/libSBBCode-typescript
 	mkdir -p ./typescript/internal
-	rm -f ./typescript/internal/*.g.cs
+	rm -f ./typescript/internal/*.ts
 
 	java -jar antlr4.jar -Dlanguage=TypeScript -no-listener *.g4 -o ./typescript/internal
+
+.PHONY: typescript
+typescript: typescript-gen
+	rm -rf dist/typescript
+	mkdir dist/typescript
+
+	cd typescript && \
+	npm version $(VERSION) && \
+	npm run pack && \
+	git restore typescript/package.json && \
+	mv libsbbcode-*.tgz ../dist/typescript/

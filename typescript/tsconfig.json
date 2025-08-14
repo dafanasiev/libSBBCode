@@ -5,7 +5,7 @@
     "declarationMap": true,
     "sourceMap": true,
     "rootDir": ".",
-    "outDir": "dist",
+    "outDir": "lib",
     "module": "esnext",
     "moduleResolution": "node10",
     "paths": {
