@@ -103,8 +103,8 @@ export class SBBCodeParser {
             const aname = a._name.text;
             let avalue: unknown = undefined;
             switch (a._value.type) {
-              case SBBCodeParser.DQSTRING:
-              case SBBCodeParser.QSTRING:
+              case InternalSBBCodeParser.DQSTRING:
+              case InternalSBBCodeParser.QSTRING:
                 avalue = a._value.text.slice(1, a._value.text.length - 2);
                 break;
               case SBBCodeLexer.INTNUMBER:
